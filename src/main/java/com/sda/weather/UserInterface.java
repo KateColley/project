@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class UserInterface {
 
     public void run() {
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome user. Here you can add location");
@@ -23,43 +22,38 @@ public class UserInterface {
                 case 1:
                     addLocation();
                     break;
-
                 case 2:
-                    showLocation();
+                    showLocations();
                     break;
-
                 case 3:
                     downloadWeather();
                     break;
-
                 default:
                     System.out.println("Dont exist");
-
-            }
-
-
-            private void createLocation () {
-                Scanner scanner = new Scanner(System.in);
-                System.out.println("Enter the name of the town: ");
-                String name = scanner.nextLine();
-                System.out.println("Enter region: ");
-                String region = scanner.nextLine();
-                System.out.println("Enter country: ");
-                String country = scanner.nextLine();
-                System.out.println("Enter the longitude: ");
-                Double longitude = scanner.nextDouble();
-                System.out.println("Enter your latitude: ");
-                Double latitude = scanner.nextDouble();
-            }
-
-            private void showLocations () {
-                System.out.println("Currently added locations: ");
-            }
-
-            private void downloadWeatherData () {
-                System.out.println("Current weather values: ");
             }
         }
+    }
+
+    private void addLocation() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the name of the town: ");
+        String name = scanner.nextLine();
+        System.out.println("Enter region: ");
+        String region = scanner.nextLine();
+        System.out.println("Enter country: ");
+        String country = scanner.nextLine();
+        System.out.println("Enter the longitude: ");
+        Double longitude = scanner.nextDouble();
+        System.out.println("Enter your latitude: ");
+        Double latitude = scanner.nextDouble();
+    }
+
+    private void showLocations() {
+        System.out.println("Currently added locations: ");
+    }
+
+    private void downloadWeather() {
+        System.out.println("Current weather values: ");
     }
 }
 
